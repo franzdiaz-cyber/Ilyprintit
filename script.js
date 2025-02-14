@@ -73,8 +73,8 @@ function displayCatHeart() {
     catHeartImage.src = 'cat-heart.gif'; // Assuming the cat-heart image is named "cat-heart.gif"
     catHeartImage.alt = 'Cat Heart';
     
-    // Set styles to make the gif smaller and centered
-    catHeartImage.style.width = '150px';
+    // Set styles to make the gif bigger and centered
+    catHeartImage.style.width = '250px'; // Increased size
     catHeartImage.style.display = 'block';
     catHeartImage.style.margin = 'auto';
 
@@ -94,11 +94,16 @@ function displayCatHeart() {
         `;
         message.style.fontSize = '18px';
         message.style.textAlign = 'justify'; // Justified text alignment
-        message.style.marginTop = '15px';
+        message.style.marginTop = '30px'; // Moved lower
         message.style.padding = '0 20px';
+        message.style.position = 'absolute';
+        message.style.bottom = '10%'; // Positioned lower on the screen
+        message.style.left = '50%';
+        message.style.transform = 'translateX(-50%)';
+        message.style.width = '80%'; // Make sure it doesn't stretch too much
 
         // Append the message below the image
-        imageContainer.appendChild(message);
+        document.body.appendChild(message);
     };
 }
 
